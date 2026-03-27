@@ -1,0 +1,58 @@
+/* App-specific styles */
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Ensure sections stack properly */
+.section-pinned {
+  will-change: transform;
+}
+
+/* Card hover effects */
+.card-border {
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Button interactions */
+.btn-primary:active,
+.btn-secondary:active {
+  transform: scale(0.98);
+}
+
+/* Link hover transitions */
+a {
+  transition: color 0.2s ease;
+}
+
+/* Image loading optimization */
+img {
+  image-rendering: -webkit-optimize-contrast;
+}
+
+/* Prevent text selection on interactive elements */
+.no-select {
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Mobile optimizations */
+@media (max-width: 1024px) {
+  .section-pinned {
+    min-height: 100vh;
+    min-height: 100dvh;
+  }
+}
+
+/* Reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
